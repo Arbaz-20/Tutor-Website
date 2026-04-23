@@ -85,6 +85,10 @@ i{
     color: var(--secondary-color);
 }
 
+.navbar i:hover{
+    color: var(--secondary-color);
+}
+
 .navbar i{
     font-size: 1.5rem;
 }
