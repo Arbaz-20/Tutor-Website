@@ -69,6 +69,22 @@ i{
     padding: 0 2rem;
 }
 
+.section{
+    margin: 4rem 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.75rem;
+    background: white;
+    box-shadow:0 4px 12px 0 rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
 /* Navbar */
 .navbar{
     background: transparent;
@@ -151,7 +167,7 @@ i{
 }
 
 .navbar.navbar-scroll{
-    background-color: rgba(235,77,85,0.7);
+    background-color: rgba(235,77,85,0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -226,6 +242,49 @@ i{
     margin: 0 auto 2rem;
 }
 
+/* Learn Topics */
+.topics{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;;
+}
+
+.topic img{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.topic h3{
+    font-size: 1rem;
+    font-weight :700;
+    margin: 0.5rem 0;
+}
+
+.topic img:hover{
+    transform: scale(1.1);
+}
+
+
+/* Chapter Cards */
+.chapter-cards{
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 0 4rem;
+}
+
+.chapter-cards img{
+    width: 130px;
+    margin-top: 1rem;
+}
+
+.chapter-cards h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin:1rem 0;
+}
+
 /* Media Queries */
 @media(max-width:1200px){
     .hero .hero-flex{
@@ -238,6 +297,11 @@ i{
 
     .hero h1{
         font-size: 3rem;
+    }
+
+    .topics{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -255,6 +319,17 @@ i{
         max-width: 600px;
         margin-top: 2rem;
     }
+
+    .topics{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chapter-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width:768px){
@@ -282,5 +357,10 @@ i{
 
     .hero img{
         max-width: 300px;
+    }
+
+    .topics{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
