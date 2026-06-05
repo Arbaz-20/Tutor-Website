@@ -57,6 +57,15 @@ i{
     font-weight: 700;
 }
 
+/* text classes */
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-secondary{
+    color: var(--secondary-color);
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -265,10 +274,9 @@ i{
     transform: scale(1.1);
 }
 
-
-/* Chapter Cards */
+/* Chapters Section */
 .chapter-cards{
-    display : grid;
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 1rem 0 4rem;
@@ -276,13 +284,7 @@ i{
 
 .chapter-cards img{
     width: 130px;
-    margin-top: 1rem;
-}
-
-.chapter-cards h3{
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin:1rem 0;
+    margin-top:1rem;
 }
 
 /* Summary */
@@ -313,6 +315,61 @@ i{
 
 .summary .list-item:last-child{
     border-bottom: none;
+}
+
+/* Info section */
+.info-container{
+    background: url(../images/audience.jpg) top center/cover no-repeat;
+    display:flex;
+}
+
+.info-content{
+    background-color: var(--primary-color);
+    color: white;
+    flex:1;
+    padding: 4rem;
+}
+
+.info-content h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.info-content p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.info-content ul li{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.info-content i{
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.info-left{
+    width: 50%;
+}
+
+/* Takeaways Section */
+.takeaways-cards {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:2rem;
+    padding:1.5rem;
+}
+
+.takeaways-card .card{
+    flex-direction: row;
+    text-align: left;
+}
+
+.takeaways-card .card i{
+    margin-right: 1rem;
 }
 
 /* Media Queries */
@@ -355,8 +412,7 @@ i{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .chapter-cards{
-        display: grid;
+    .takeaways-cards {
         grid-template-columns: 1fr;
     }
 
@@ -373,6 +429,33 @@ i{
         display: block;
         padding: 10px;
     }
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-content{
+        padding: 2rem;
+    }
+
+    .info-content h2{
+        font-size: 1.5rem;
+    }
+
+    .info-content p{
+        font-size:1rem;
+    }
+
+    .info-left{
+        display: none;
+    }
+
+    .chapter-cards {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width:576px){
@@ -396,5 +479,10 @@ i{
 
     .summary .container{
         padding: 0;
+    }
+
+    .chapter-cards{
+        display:grid;
+        grid-template-columns: 1fr;
     }
 }
